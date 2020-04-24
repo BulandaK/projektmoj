@@ -15,13 +15,18 @@ body{
 }
 /* nawigacja */
  nav {
+   position: fixed;
+   top:-10vh;
+   left: 50%;
+  transform: translateX(-50%);
   width: 60vw;
   height: 10vh;
   margin: 0 auto;
   /* align-items: center; */
   background-color: #E08119;
-  border-radius: 0 0 25px 25px;
+  transition: 1s;
 }
+
 nav ul{
   display: flex;
   justify-content: space-around;
@@ -50,15 +55,43 @@ nav ul li a{
 /* border */
 nav ul li:nth-child(2){
   border-left: 2px solid white;
-  border-right: 2px solid white;
+
 }
 nav ul li:nth-child(3){
-
+  border-left: 2px solid white;
   border-right: 2px solid white;
 }
-nav ul li:hover > a{
+nav ul li:nth-child(4){
+
+  border-right: 2px solid white;
+
+}
+nav ul li:hover>a{
   color: black;
 }
+/* cyndzel */
+
+.up{
+  position: fixed;
+  width: 5vh;
+  height: 5vh;
+  background-color: #E08119;
+  top: 0vh;
+  left: 31.8vh;
+  transition: 1s;
+}
+
+
+.up:hover{
+  top: 10vh;
+}
+.up:hover +nav{
+  top:0vh;
+}
+
+
+
+
 /* Sekcja dzien dobry */
 
 section{
